@@ -1,0 +1,12 @@
+#!/bin/bash
+yum update
+
+yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+# the following is not required, so long as this is an SSM managed instance
+# yum install ruby -y
+# wget https://aws-codedeploy-us-west-2.s3.us-west-2.amazonaws.com/latest/install
+# chmod +x ./install
+# ./install auto
